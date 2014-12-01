@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sudoku</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link href="style/sudoku.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+    <div class="col-md-3">
+      <h1 class="title">Sudoku</h1>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2"><h3 class="text-uppercase score" id="score">Left<br><div id="scoreval">0</div></h3></div>
+  </div>
+    <div class="row">
+      <div class="col-md-4">
+     <h2  id="game-message" class="message">Begin Game!</h2></div>
+     <div class="col-md-2">
+      <button type="button" class="btn btn-new" onclick="refresh()"><h4>Start New Game</h4></button>
+    </div>
+    </div>
+        <table id="sudoku">
+        <tr><div class="row">
+
+          <td class="sudoku-cell cell-l cell-u"><input id="0" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="1" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="2" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="3" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="4" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="5" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="6" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="7" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="8" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l"><input id="9" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="10" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="11" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="12" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="13" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="14" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="15" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="16" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="17" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l cell-d"><input id="18" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="19" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="20" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="21" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="22" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="23" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="24" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="25" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="26" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l cell-u"><input id="27" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="28" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="29" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="30" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="31" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="32" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="33" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="34" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="35" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l"><input id="36" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="37" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="38" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="39" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="40" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="41" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="42" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="43" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="44" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l cell-d"><input id="45" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="46" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="47" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="48" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="49" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="50" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="51" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="52" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="53" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l cell-u"><input id="54" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="55" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="56" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="57" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="58" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="59" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-u"><input id="60" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-u"><input id="61" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-u"><input id="62" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l"><input id="63" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="64" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="65" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="66" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="67" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="68" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l"><input id="69" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell"><input id="70" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r"><input id="71" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        <tr><div class="row">
+          <td class="sudoku-cell cell-l cell-d"><input id="72" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="73" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="74" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="75" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="76" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="77" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-l cell-d"><input id="78" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-d"><input id="79" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+          <td class="sudoku-cell cell-r cell-d"><input id="80" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1"></td>
+        </tr>
+        </table>
+    <hr>
+
+    <script type="text/javascript" src="js/sudoku.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+  </div>
+
+</body>
+</html>

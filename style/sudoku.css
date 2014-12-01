@@ -1,0 +1,119 @@
+  html, body {
+    color: #776E65;
+  }
+
+  .sudoku
+  {
+    margin: 0 auto;
+  }
+
+  .title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  }
+
+  .message {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  }
+
+  .btn-new {
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    background: #5bc0de;
+    color: #EEE4DA;
+    font-weight: bold;
+    text-align: center;;
+  }
+
+  .score {
+  background: #5bc0de;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 20px;
+  color: #EEE4DA;
+  text-align: center;
+  border-radius: 4px;
+  }
+
+  .no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+    height:
+  }
+
+  .sudoku-cell {
+  width: 56.25px;
+  height: 56.25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+  border-radius: 4px;
+  background: #F59563;
+  border-color: #5A483B;
+  border-width: 1px;
+  border-style: solid;
+  }
+
+
+  input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    width: 56.25px;
+    height: 56.25px;
+    font-size:55px;
+    text-align:center;
+    color: #eee4da;
+  }
+
+
+  .wrong-cell {
+    color: red;
+    font-weight: bolder;
+  }
+
+  .maybe-cell {
+    color: black;
+  }
+
+  .right-cell {
+    color: green;
+    font-weight: bolder;
+  }
+
+
+  .cell-d
+  {
+  border-bottom-color: #5A483B;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  }
+
+  .cell-u
+  {
+  border-top-color: #5A483B;
+  border-top-width: 3px;
+  border-top-style: solid;
+  }
+
+  .cell-l
+  {
+  border-left-color: #5A483B;
+  border-left-width: 3px;
+  border-left-style:  solid;
+  }
+
+  .cell-r
+  {
+  border-right-color: #5A483B;
+  border-right-width: 3px;
+  border-right-style:  solid;
+  }
+
+  .readOnly {
+    font-weight: bold;
+  }
