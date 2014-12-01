@@ -14,18 +14,12 @@
 <body>
   <div class="container">
     <div class="row">
-    <div class="col-md-3">
-      <h1 class="title">Sudoku</h1>
+      <div class="col-md-6 col-xs-6"><div class="title">Sudoku</div></div>
+      <div class="col-md-2 col-xs-2"><div class="text-uppercase score">Left<br><div id="scoreval">0</div></div></div>
+      <div class="col-md-4 col-xs-4"><div class="newgame"><button type="button" class="btn btn-sm btn-new" onclick="refresh()">New Game</button></div></div>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-2"><h3 class="text-uppercase score" id="score">Left<br><div id="scoreval">0</div></h3></div>
-  </div>
     <div class="row">
-      <div class="col-md-4">
-     <h2  id="game-message" class="message">Begin Game!</h2></div>
-     <div class="col-md-2">
-      <button type="button" class="btn btn-new" onclick="refresh()"><h4>Start New Game</h4></button>
-    </div>
+      <div id="game-message" class="message">Begin Game!</div>
     </div>
         <div class="row">
           <input class="sudoku-cell cell-l cell-u" id="0" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1">
@@ -127,6 +121,7 @@
           <input class="sudoku-cell cell-r cell-d" id="80" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1">
         </div>
     <hr>
+    </div>
 
     <script type="text/javascript" src="js/sudoku.js"></script>
     <script type="text/javascript" src="js/application.js"></script>

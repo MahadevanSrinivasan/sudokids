@@ -1,7 +1,6 @@
-@media screen and (min-width: 1200px) {
-
+@media screen and (min-width: 600px) {
   .container {
-    width: 1200px;
+    width: 600px;
     margin: 0 auto; }
 
   html, body {
@@ -25,15 +24,19 @@
   }
 
   .btn-new {
-    margin-top: 5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     background: #5bc0de;
     color: #EEE4DA;
     font-weight: bold;
-    text-align: center;;
+    text-align: center;
   }
 
+  .newgame{
+  margin-top: 20px;
+  border-bottom: 20px;
+  float: right;
+}
   .score {
   background: #5bc0de;
   font-family: 'Open Sans', sans-serif;
@@ -43,6 +46,7 @@
   color: #EEE4DA;
   text-align: center;
   border-radius: 4px;
+  float: center;
   }
 
   .no-padding {
@@ -124,13 +128,11 @@
   .readOnly {
     font-weight: bold;
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
   .container {
-    width: 600px;
+    width: 280px;
     margin: 0 auto; }
 
   html, body {
@@ -144,34 +146,38 @@
 
   .title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   }
 
   .message {
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   }
 
   .btn-new {
-    margin-top: 2.5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     background: #5bc0de;
     color: #EEE4DA;
-    font-weight: bold;
-    text-align: center;;
+    text-align: center;
   }
+
+.newgame{
+  margin-top: 15px;
+  border-bottom: 10px;
+}
 
   .score {
   background: #5bc0de;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 15px;
   border-bottom: 10px;
   color: #EEE4DA;
   text-align: center;
   border-radius: 2px;
+  float: center;
   }
 
   .no-padding {
@@ -181,14 +187,14 @@
   }
 
   .sudoku-cell {
-  width: 28px;
-  height: 28px;
-  margin-right: 2px;
-  margin-bottom: 2px;
+  width: 26px;
+  height: 26px;
+  margin-right: 0.0px;
+  margin-bottom: 0.0px;
   border-radius: 2px;
   background: #F59563;
   border-color: #5A483B;
-  border-width: 1px;
+  border-width: 0.5px;
   border-style: solid;
   }
 
@@ -201,7 +207,7 @@
     height: 28px;
     line-height: 30px;
     padding: 0 0px;
-    font-size:25;
+    font-size:25px;
     text-align:center;
     color: #eee4da;
   }
@@ -225,33 +231,32 @@
   .cell-d
   {
   border-bottom-color: #5A483B;
-  border-bottom-width: 1px;
+  border-bottom-width: 2.5px;
   border-bottom-style: solid;
   }
 
   .cell-u
   {
   border-top-color: #5A483B;
-  border-top-width: 1px;
+  border-top-width: 2.5px;
   border-top-style: solid;
   }
 
   .cell-l
   {
   border-left-color: #5A483B;
-  border-left-width: 1px;
+  border-left-width: 2.5px;
   border-left-style:  solid;
   }
 
   .cell-r
   {
   border-right-color: #5A483B;
-  border-right-width: 1px;
+  border-right-width: 2.5px;
   border-right-style:  solid;
   }
 
   .readOnly {
     font-weight: bold;
   }
-
 }
