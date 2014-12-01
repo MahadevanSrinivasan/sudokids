@@ -81,6 +81,15 @@
     color: #eee4da;
   }
 
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
 
   .wrong-cell {
     color: red;
@@ -207,11 +216,20 @@
     height: 28px;
     line-height: 30px;
     padding: 0 0px;
-    font-size:25px;
+    font-size:22px;
     text-align:center;
     color: #eee4da;
   }
 
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
 
   .wrong-cell {
     color: red;
