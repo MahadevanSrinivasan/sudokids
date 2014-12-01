@@ -1,3 +1,9 @@
+@media screen and (min-width: 1200px) {
+
+  .container {
+    width: 1200px;
+    margin: 0 auto; }
+
   html, body {
     color: #776E65;
   }
@@ -50,7 +56,6 @@
   height: 56.25px;
   margin-right: 5px;
   margin-bottom: 5px;
-  float: left;
   border-radius: 4px;
   background: #F59563;
   border-color: #5A483B;
@@ -65,7 +70,9 @@
     background: transparent;
     width: 56.25px;
     height: 56.25px;
-    font-size:55px;
+    line-height: 60px;
+    padding: 0 0px;
+    font-size:50px;
     text-align:center;
     color: #eee4da;
   }
@@ -117,3 +124,134 @@
   .readOnly {
     font-weight: bold;
   }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    width: 600px;
+    margin: 0 auto; }
+
+  html, body {
+    color: #776E65;
+  }
+
+  .sudoku
+  {
+    margin: 0 auto;
+  }
+
+  .title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  }
+
+  .message {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  }
+
+  .btn-new {
+    margin-top: 2.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    background: #5bc0de;
+    color: #EEE4DA;
+    font-weight: bold;
+    text-align: center;;
+  }
+
+  .score {
+  background: #5bc0de;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 10px;
+  color: #EEE4DA;
+  text-align: center;
+  border-radius: 2px;
+  }
+
+  .no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+    height:
+  }
+
+  .sudoku-cell {
+  width: 28px;
+  height: 28px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+  background: #F59563;
+  border-color: #5A483B;
+  border-width: 1px;
+  border-style: solid;
+  }
+
+
+  input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    line-height: 30px;
+    padding: 0 0px;
+    font-size:25;
+    text-align:center;
+    color: #eee4da;
+  }
+
+
+  .wrong-cell {
+    color: red;
+    font-weight: bolder;
+  }
+
+  .maybe-cell {
+    color: black;
+  }
+
+  .right-cell {
+    color: green;
+    font-weight: bolder;
+  }
+
+
+  .cell-d
+  {
+  border-bottom-color: #5A483B;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  }
+
+  .cell-u
+  {
+  border-top-color: #5A483B;
+  border-top-width: 1px;
+  border-top-style: solid;
+  }
+
+  .cell-l
+  {
+  border-left-color: #5A483B;
+  border-left-width: 1px;
+  border-left-style:  solid;
+  }
+
+  .cell-r
+  {
+  border-right-color: #5A483B;
+  border-right-width: 1px;
+  border-right-style:  solid;
+  }
+
+  .readOnly {
+    font-weight: bold;
+  }
+
+}
