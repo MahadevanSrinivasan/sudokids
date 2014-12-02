@@ -317,6 +317,7 @@ function setElem(val, cellid) {
   problem[cellid] = val;
   $('#'+cellid).addClass("right-cell");
   unsolved = unsolved - 1;
+  $('#'+cellid).blur();
   $('#score').effect("pulsate","slow");
   if(unsolved == 0) {
     $('#game-message').text("You won! Bravo!");
