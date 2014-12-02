@@ -318,7 +318,7 @@ function setElem(val, cellid) {
   $('#'+cellid).addClass("right-cell");
   unsolved = unsolved - 1;
   $('#'+cellid).blur();
-  $('#score').effect("pulsate","slow");
+  $('#scoreval').effect("pulsate","slow");
   if(unsolved == 0) {
     $('#game-message').text("You won! Bravo!");
   }
@@ -327,7 +327,6 @@ function setElem(val, cellid) {
 function resetElem(cellid) {
   var val = problem[cellid];
   if($('#'+cellid).val() == val) {
-    console.log("increment");
     unsolved = unsolved + 1;
   }
   delete rowSet[celltoi(cellid)][val];

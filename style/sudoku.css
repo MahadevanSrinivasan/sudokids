@@ -16,11 +16,53 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 60px;
   font-weight: bold;
+  margin: 0px;
+  display: block;
+  float: left;
+  }
+
+  .scores-container {
+    float: right;
+    text-align: right;
+  }
+
+  .score-container {
+    background: none repeat scroll 0% 0% #BBADA0;
+    padding: 5px 15px;
+    font-size: 25px;
+    height: 50px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #FFF;
+    margin-top: 8px;
+    text-align: center;
+    margin-right: 42px;
+    float:left;
+  }
+
+  .newgame {
+    display: inline-block;
+    background: #BBADA0;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    height: 50px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #FFF;
+    margin-top: 8px;
+    text-align: center;
+    margin-right: 23px;
+    float: right;
+    cursor: pointer;
+    display: block;
   }
 
   .message {
   font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   }
 
   .btn-new {
@@ -32,11 +74,6 @@
     text-align: center;
   }
 
-  .newgame{
-  margin-top: 20px;
-  border-bottom: 20px;
-  float: right;
-}
   .score {
   background: #5bc0de;
   font-family: 'Open Sans', sans-serif;
@@ -157,6 +194,50 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
   font-weight: bold;
+  margin: 0px;
+  display: block;
+  float: left;
+  }
+
+  .scores-container {
+    float: right;
+    text-align: right;
+  }
+
+  .score-container {
+    background: none repeat scroll 0% 0% #BBADA0;
+    padding: 3px 8px;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #FFF;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    margin-right: 10px;
+    float:left;
+  }
+
+  .newgame {
+    display: inline-block;
+    background: #BBADA0;
+    padding: 2px 8px;
+    text-decoration: none;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #FFF;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    margin-right: 15px;
+    float: right;
+    cursor: pointer;
+    display: block;
   }
 
   .message {
@@ -172,10 +253,6 @@
     text-align: center;
   }
 
-.newgame{
-  margin-top: 15px;
-  border-bottom: 10px;
-}
 
   .score {
   background: #5bc0de;
