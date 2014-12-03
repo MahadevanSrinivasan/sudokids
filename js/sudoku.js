@@ -141,7 +141,9 @@ function checkVal(cell) {
     for(k=0;k<9;k++)
     {
       var cellid2 = ijtocell(celltoi(cellid),k);
-      $('#'+cellid2).effect("pulsate","slow");
+      $('#'+cellid2).animate({backgroundColor: "#F38630"});
+      $('#'+cellid2).animate({backgroundColor: "#A7DBD8"});
+      //$('#'+cellid2).effect("pulsate","slow");
     }
   }
   else if(val in colSet[celltoj(cellid)]) {
@@ -150,7 +152,9 @@ function checkVal(cell) {
     for(k=0;k<9;k++)
     {
       var cellid2 = ijtocell(k,celltoj(cellid));
-      $('#'+cellid2).effect("pulsate","slow");
+      $('#'+cellid2).animate({backgroundColor: "#F38630"});
+      $('#'+cellid2).animate({backgroundColor: "#A7DBD8"});
+      //$('#'+cellid2).effect("pulsate","slow");
     }
   }
   else if(val in boxSet[celltobox(cellid)]) {
@@ -162,7 +166,9 @@ function checkVal(cell) {
     for(var i = iStart; i < iStart + 3; i++) {
       for(var j = jStart; j < jStart + 3; j++) {
         var cellid2 = ijtocell(i,j);
-        $('#'+cellid2).effect("pulsate","slow");
+        $('#'+cellid2).animate({backgroundColor: "#F38630"});
+        $('#'+cellid2).animate({backgroundColor: "#A7DBD8"});
+        //$('#'+cellid2).effect("pulsate","slow");
       }
     }
   }
@@ -318,7 +324,8 @@ function setElem(val, cellid) {
   $('#'+cellid).addClass("right-cell");
   unsolved = unsolved - 1;
   $('#'+cellid).blur();
-  $('#scoreval').effect("pulsate","slow");
+  $('#scoreval').animate({backgroundColor: "#F38630"});
+  $('#scoreval').animate({backgroundColor: "#A7DBD8"});
   if(unsolved == 0) {
     $('#game-message').text("You won! Bravo!");
   }

@@ -1,0 +1,13 @@
+
+
+  .sudoku-cell {
+  width: 56.25px;
+  height: 56.25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background: #F59563;
+  border-color: #5A483B;
+  border-width: 1px;
+  border-style: solid;
+  }
