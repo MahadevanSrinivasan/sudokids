@@ -1,13 +1,22 @@
-@media screen and (min-width: 600px) {
-  .container {
-    width: 600px;
-    margin: 0 auto; }
-
   html, body {
     color: #776E65;
     background: #E0E4CC;
   }
 
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 600px;
+    margin: 0 auto; }
   .sudoku
   {
     margin: 0 auto;
@@ -37,7 +46,7 @@
     border-radius: 10px;
     margin-top: 8px;
     text-align: center;
-    margin-right: 42px;
+    margin-right: 16px;
     border-width: 2px;
     border-color: #776E65;
     float:left;
@@ -52,10 +61,10 @@
     height: 50px;
     line-height: 35px;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 8px;
     text-align: center;
-    margin-right: 23px;
+    margin-right: 80px;
     float: right;
     cursor: pointer;
     display: block;
@@ -78,10 +87,7 @@ form {
   .sudoku-cell {
   width: 56.25px;
   height: 56.25px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin: 0px;
   border-radius: 15px;
   padding: 0 0px;
   background: #A7DBD8;
@@ -91,9 +97,6 @@ form {
   float:left;
   }
 
-  .gameboard {
-    background: #E0E4CC;
-  }
   input {
     border: 0px;
     outline: 0px;
@@ -108,16 +111,6 @@ form {
     /* color: #eee4da; */
   }
 
-  input[type=number]::-webkit-outer-spin-button,
-  input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type=number] {
-    -moz-appearance:textfield;
-  }
-
   .wrong-cell {
     color: red;
     font-weight: bolder;
@@ -125,6 +118,7 @@ form {
 
   .maybe-cell {
     color: black;
+    font-weight: bolder;
   }
 
   .right-cell {
@@ -168,11 +162,8 @@ form {
 
 @media screen and (max-width: 600px) {
   .container {
-    width: 280px;
-    margin: 0 auto; }
-
-  html, body {
-    color: #776E65;
+    width: 310px;
+    margin: 20px auto;
   }
 
   .sudoku
@@ -187,6 +178,14 @@ form {
   margin: 0px;
   display: block;
   float: left;
+  /* background: #69D2E7;
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px; */
+  }
+
+  .gameboard {
+    margin-top: 10px;
   }
 
   .scores-container {
@@ -194,8 +193,8 @@ form {
     text-align: right;
   }
 
-  .score-container {
-    background: none repeat scroll 0% 0% #A7DBD8;
+ .score-container {
+    background: #A7DBD8;
     padding: 3px 8px;
     font-size: 12px;
     height: 25px;
@@ -205,7 +204,7 @@ form {
     margin-top: 4px;
     margin-bottom: 4px;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 14px;
     float:left;
   }
 
@@ -219,58 +218,39 @@ form {
     line-height: 25px;
     font-weight: bold;
     border-radius: 3px;
-    color: #FFF;
     margin-top: 4px;
     margin-bottom: 4px;
     text-align: center;
-    margin-right: 15px;
+    margin-right: 4px;
     float: right;
     cursor: pointer;
     display: block;
   }
 
   .message {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  }
-
-  .btn-new {
+    margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
     font-weight: bold;
-    background: #5bc0de;
-    color: #EEE4DA;
     text-align: center;
-  }
-
-
-  .score {
-  background: #5bc0de;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  margin-top: 15px;
-  border-bottom: 10px;
-  color: #EEE4DA;
-  text-align: center;
-  border-radius: 2px;
-  float: center;
-  }
-
-  .no-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-    height:
+    background: #A7DBD8;
+    border-radius: 30px;
   }
 
   .sudoku-cell {
-  width: 26px;
-  height: 26px;
-  margin-right: 0.0px;
-  margin-bottom: 0.0px;
-  border-radius: 2px;
-  background: #F59563;
+  width: 30.5px;
+  height: 30.5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  border-radius: 5px;
+  padding: 0 0px;
+  background: #A7DBD8;
   border-color: #5A483B;
-  border-width: 0.5px;
+  border-width: 1px;
   border-style: solid;
+  float:left;
   }
 
 
@@ -278,13 +258,13 @@ form {
     border: 0;
     outline: 0;
     background: transparent;
-    width: 28px;
-    height: 28px;
+    width: 29.5px;
+    height: 29.5px;
     line-height: 30px;
     padding: 0 0px;
-    font-size:22px;
+    font-size:26px;
     text-align:center;
-    color: #eee4da;
+    /* color: #eee4da; */
   }
 
   input[type=number]::-webkit-outer-spin-button,
@@ -304,6 +284,7 @@ form {
 
   .maybe-cell {
     color: black;
+    font-weight: bolder;
   }
 
   .right-cell {
@@ -311,36 +292,35 @@ form {
     font-weight: bolder;
   }
 
-
   .cell-d
   {
-  border-bottom-color: #5A483B;
-  border-bottom-width: 2.5px;
-  border-bottom-style: solid;
+  margin-bottom: 3px;
+  border-bottom-width: 1px;
+  border-style: solid;
   }
 
   .cell-u
   {
-  border-top-color: #5A483B;
-  border-top-width: 2.5px;
-  border-top-style: solid;
+  margin-top: 3px;
+  border-top-width: 1px;
+  border-style: solid;
   }
 
   .cell-l
   {
-  border-left-color: #5A483B;
-  border-left-width: 2.5px;
-  border-left-style:  solid;
+  margin-left: 3px;
+  border-left-width: 1px;
+  border-style: solid;
   }
 
   .cell-r
   {
-  border-right-color: #5A483B;
-  border-right-width: 2.5px;
-  border-right-style:  solid;
+  margin-right: 3px;
+  border-right-width: 1px;
+  border-style: solid;
   }
 
   .readOnly {
-    font-weight: bold;
+    font-weight: normal;
   }
 }
