@@ -124,13 +124,13 @@
     background: transparent;
     width: 56.25px;
     height: 56.25px;
-    line-height: 60px;
+    line-height: 0px;
     padding: 0 0px;
     font-size:50px;
     text-align:center;
     color: #eee4da;
-  }
 
+}
   .wrong-cell {
     color: #fe5263;
     font-weight: bolder;
@@ -277,9 +277,9 @@
     background: transparent;
     width: 27.0px;
     height: 27.0px;
-    line-height: 28px;
+    line-height: 0px;
     padding: 0 0px;
-    font-size:26px;
+    font-size:25px;
     text-align:center;
     /* color: #eee4da; */
   }
