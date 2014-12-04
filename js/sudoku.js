@@ -328,7 +328,7 @@ function setElem(val, cellid) {
   $('#scoreval').animate({backgroundColor: "#edcf72"});
   if(unsolved == 0) {
     $('#game-message').text("You won! New game?");
-    $('#newgame').animate({backgroundColor: "#d9534f"});
+    $('#startnew').animate({backgroundColor: "#d9534f"});
   }
 }
 
