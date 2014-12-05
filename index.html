@@ -22,6 +22,9 @@
       <button id="startnew" class="newgame btn" onclick="refresh()">New game</button>
     </div>
     </div>
+    <div class="row">
+      <div id="game-message" class="message text-lowercase">Begin Game!</div>
+    </div>
     <div class="gameboard">
         <div class="row">
           <input type="tel" pattern="[0-9]?" class="sudoku-cell cell-l cell-u" id="0" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1">
@@ -123,9 +126,6 @@
           <input type="tel" pattern="[0-9]?" class="sudoku-cell cell-r cell-d" id="80" autocomplete="off" onkeyup="checkVal(this)" onInput="reset(this)" maxlength="1">
         </div>
       </div>
-      <div class="row">
-      <div id="game-message" class="message text-lowercase">Begin Game!</div>
-    </div>
     </div>
 
 

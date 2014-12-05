@@ -182,8 +182,9 @@
 
 @media screen and (max-width: 600px) {
   .container {
-    width: 310px;
+    width: 300px;
     margin: 20px auto;
+    padding: 0px;
   }
 
   .sudoku
@@ -255,8 +256,8 @@
   }
 
   .sudoku-cell {
-  width: 27.0px;
-  height: 27.0px;
+  width: 30.0px;
+  height: 30.0px;
   margin-left: 1px;
   margin-right: 1px;
   margin-bottom: 1px;
@@ -275,11 +276,11 @@
     border: 0;
     outline: 0;
     background: transparent;
-    width: 27.0px;
-    height: 27.0px;
+    width: 29.0px;
+    height: 29.0px;
     line-height: 0px;
     padding: 0 0px;
-    font-size:25px;
+    font-size:27px;
     text-align:center;
     /* color: #eee4da; */
   }

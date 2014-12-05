@@ -140,10 +140,7 @@ function checkVal(cell) {
     $('#'+cellid).addClass("wrong-cell");
     for(k=0;k<9;k++)
     {
-      var cellid2 = ijtocell(celltoi(cellid),k);
-      $('#'+cellid2).animate({backgroundColor: "#bbada0"});
-      $('#'+cellid2).animate({backgroundColor: "#edcf72"});
-      //$('#'+cellid2).effect("pulsate","slow");
+      animateCell(ijtocell(celltoi(cellid),k));
     }
   }
   else if(val in colSet[celltoj(cellid)]) {
@@ -151,10 +148,7 @@ function checkVal(cell) {
     $('#'+cellid).addClass("wrong-cell");
     for(k=0;k<9;k++)
     {
-      var cellid2 = ijtocell(k,celltoj(cellid));
-      $('#'+cellid2).animate({backgroundColor: "#bbada0"});
-      $('#'+cellid2).animate({backgroundColor: "#edcf72"});
-      //$('#'+cellid2).effect("pulsate","slow");
+      animateCell(ijtocell(k,celltoj(cellid)));
     }
   }
   else if(val in boxSet[celltobox(cellid)]) {
@@ -165,10 +159,7 @@ function checkVal(cell) {
     var iStart = Math.floor(boxnum / 3) * 3;
     for(var i = iStart; i < iStart + 3; i++) {
       for(var j = jStart; j < jStart + 3; j++) {
-        var cellid2 = ijtocell(i,j);
-        $('#'+cellid2).animate({backgroundColor: "#bbada0"});
-        $('#'+cellid2).animate({backgroundColor: "#edcf72"});
-        //$('#'+cellid2).effect("pulsate","slow");
+        animateCell(ijtocell(i,j));
       }
     }
   }
@@ -176,7 +167,6 @@ function checkVal(cell) {
   {
     /* Doing a naive search first */
     var posVals = posValuesForCell(cellid);
-    //console.log(posVals);
     if(posVals.length == 1)
     {
       message.text("Easy peasy!");
@@ -206,6 +196,11 @@ function checkVal(cell) {
   $('#scoreval').text(unsolved);
 }
 
+function animateCell(id) {
+  $('#'+id).animate({backgroundColor: "#bbada0"});
+  $('#'+id).animate({backgroundColor: "#edcf72"});
+}
+
 function doSearchByBox(cellid) {
   var boxnum = celltobox(cellid);
   var thisboxset = posValuesForCell(cellid);
@@ -230,7 +225,6 @@ function findSingular(allElems, thisset) {
       result[allElems[i]] = 0;
     result[allElems[i]]++;
   }
-  //console.log(result);
 
   for(i = 0; i < thisset.length; i++)
     if (result[thisset[i]] == 1 || !(thisset[i] in result) )
@@ -324,8 +318,7 @@ function setElem(val, cellid) {
   $('#'+cellid).addClass("right-cell");
   unsolved = unsolved - 1;
   $('#'+cellid).blur();
-  $('#scoreval').animate({backgroundColor: "#bbada0"});
-  $('#scoreval').animate({backgroundColor: "#edcf72"});
+  animateCell('scoreval');
   if(unsolved == 0) {
     $('#game-message').text("You won! New game?");
     $('#startnew').animate({backgroundColor: "#d9534f"});
