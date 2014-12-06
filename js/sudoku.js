@@ -110,6 +110,38 @@ function refresh() {
   location.reload();
 }
 
+function hint() {
+  for(var i=0; i<81;i++) {
+    if(problem[i] == '') {
+      var posVals = posValuesForCell(i);
+      if(posVals.length == 1)
+      {
+        animateCellHint(i); break;
+      }
+      else if((ans = doSearchByBox(i)) != -1)
+      {
+        animateCellHint(i); break;
+      }
+      else if((ans = doSearchByRow(i)) != -1)
+      {
+        animateCellHint(i); break;
+      }
+      else if((ans = doSearchByCol(i)) != -1)
+      {
+        animateCellHint(i); break;
+      }
+    }
+  }
+}
+
+function findFirstEmptyCell() {
+  for(var i=0; i<81;i++) {
+    if(problem[i] == '') {
+      animateCell(i);
+      return i;
+    }
+  }
+}
 
 function checkVal(cell) {
   var cellid = cell.id;
@@ -140,7 +172,7 @@ function checkVal(cell) {
     $('#'+cellid).addClass("wrong-cell");
     for(k=0;k<9;k++)
     {
-      animateCell(ijtocell(celltoi(cellid),k));
+      animateCell(ijtocell(celltoi(cellid),k), "#bbada0", 1);
     }
   }
   else if(val in colSet[celltoj(cellid)]) {
@@ -148,7 +180,7 @@ function checkVal(cell) {
     $('#'+cellid).addClass("wrong-cell");
     for(k=0;k<9;k++)
     {
-      animateCell(ijtocell(k,celltoj(cellid)));
+      animateCell(ijtocell(k,celltoj(cellid)), "#bbada0", 1);
     }
   }
   else if(val in boxSet[celltobox(cellid)]) {
@@ -159,7 +191,7 @@ function checkVal(cell) {
     var iStart = Math.floor(boxnum / 3) * 3;
     for(var i = iStart; i < iStart + 3; i++) {
       for(var j = jStart; j < jStart + 3; j++) {
-        animateCell(ijtocell(i,j));
+        animateCell(ijtocell(i,j), "#bbada0", 1);
       }
     }
   }
@@ -196,9 +228,16 @@ function checkVal(cell) {
   $('#scoreval').text(unsolved);
 }
 
-function animateCell(id) {
-  $('#'+id).animate({backgroundColor: "#bbada0"});
+function animateCell(id, color, times) {
+  for(var i = 0; i < times; i++) {
+  $('#'+id).animate({backgroundColor: color});
   $('#'+id).animate({backgroundColor: "#edcf72"});
+}
+}
+
+function animateCellHint(id) {
+  $("#game-message").text("I would look here..");
+  animateCell(id, "#3D9970", 3);
 }
 
 function doSearchByBox(cellid) {
@@ -318,7 +357,7 @@ function setElem(val, cellid) {
   $('#'+cellid).addClass("right-cell");
   unsolved = unsolved - 1;
   $('#'+cellid).blur();
-  animateCell('scoreval');
+  animateCell('scoreval', "#bbada0", 1);
   if(unsolved == 0) {
     $('#game-message').text("You won! New game?");
     $('#startnew').animate({backgroundColor: "#d9534f"});
