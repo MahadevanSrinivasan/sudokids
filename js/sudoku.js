@@ -404,3 +404,8 @@ function celltoj(cellid) {
 function celltobox(cellid) {
   return ijtobox(celltoi(cellid), celltoj(cellid));
 }
+
+function BlockMove(event) {
+  // Tell Safari not to move the window.
+  event.preventDefault() ;
+ }
