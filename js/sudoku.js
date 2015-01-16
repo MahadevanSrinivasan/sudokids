@@ -276,14 +276,24 @@ function doSearchByRow(cellid) {
   var rownum = celltobox(cellid);
   var thisrowset = posValuesForCell(cellid);
   var allElems = [];
+  var result = {};
   var i = celltoi(cellid);
   for (j = 0; j < 9; j++) {
     var cellid1 = ijtocell(i, j);
     if(problem[cellid1] == '') {
-      allElems.push.apply(allElems, posValuesForCell(cellid1));
+      allElems = posValuesForCell(cellid1);
+      for (k = 0; k < allElems.length; k++) {
+      if (!result[allElems[k]])
+        result[allElems[k]] = 0;
+      result[allElems[k]]++;
+      }
     }
   }
-  return findSingular(allElems, thisrowset);
+  for(i = 0; i < thisrowset.length; i++)
+    if (result[thisrowset[i]] == 1 || !(thisrowset[i] in result) )
+      return thisrowset[i];
+
+  return -1;
 }
 
 function doSearchByCol(cellid) {
