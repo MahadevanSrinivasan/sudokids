@@ -1,5 +1,6 @@
   html, body {
-    color: #776E65;
+    background-color: #FAF0E6;
+    color: #708090;
   }
 
   .sudoku
@@ -22,19 +23,19 @@
     margin-top: 5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    background: #5bc0de;
-    color: #EEE4DA;
+    background: #B0E0E6;
+    color: #4682B4;
     font-weight: bold;
     text-align: center;;
   }
 
   .score {
-  background: #5bc0de;
+  background: #B0E0E6;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   margin-top: 20px;
   border-bottom: 20px;
-  color: #EEE4DA;
+  color: #4682B4;
   text-align: center;
   border-radius: 4px;
   }
@@ -52,8 +53,8 @@
   margin-bottom: 5px;
   float: left;
   border-radius: 4px;
-  background: #F59563;
-  border-color: #5A483B;
+  background: #D8BFD8;
+  border-color: #BC8F8F;
   border-width: 1px;
   border-style: solid;
   }
@@ -67,49 +68,49 @@
     height: 56.25px;
     font-size:55px;
     text-align:center;
-    color: #eee4da;
+    color: #5F9EA0;
   }
 
 
   .wrong-cell {
-    color: red;
+    color: #FFB6C1;
     font-weight: bolder;
   }
 
   .maybe-cell {
-    color: black;
+    color: #A9A9A9;
   }
 
   .right-cell {
-    color: green;
+    color: #90EE90;
     font-weight: bolder;
   }
 
 
   .cell-d
   {
-  border-bottom-color: #5A483B;
+  border-bottom-color: #BC8F8F;
   border-bottom-width: 3px;
   border-bottom-style: solid;
   }
 
   .cell-u
   {
-  border-top-color: #5A483B;
+  border-top-color: #BC8F8F;
   border-top-width: 3px;
   border-top-style: solid;
   }
 
   .cell-l
   {
-  border-left-color: #5A483B;
+  border-left-color: #BC8F8F;
   border-left-width: 3px;
   border-left-style:  solid;
   }
 
   .cell-r
   {
-  border-right-color: #5A483B;
+  border-right-color: #BC8F8F;
   border-right-width: 3px;
   border-right-style:  solid;
   }
